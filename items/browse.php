@@ -27,21 +27,9 @@ $sortLinks[__('Date Added')] = 'added';
     <div class="picture">
         <p><strong><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?></strong></p>
         <div class="picture-img">
-            <?php echo link_to_item(item_image('square_thumbnail')); ?>
+            <?php $description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>100)) ?>
+            <?php echo link_to_item(item_image('square_thumbnail', array('title' => $description))); ?>
         </div>
-        <div class="item-meta">
-        <?php if (metadata('item', 'has thumbnail')): ?>
-        <?php endif; ?>
-
-        <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>100))): ?>
-        <div class="item-description">
-            <?php echo $description; ?>
-        </div>
-        <?php endif; ?>
-
-        <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
-
-        </div><!-- end class="item-meta" -->
     </div><!-- end class="item hentry" -->
     <?php endforeach; ?>
 </div>
