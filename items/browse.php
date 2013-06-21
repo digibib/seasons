@@ -30,7 +30,7 @@ $sortLinks[__('Date Added')] = 'added';
             <?php $description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>100)) ?>
             <?php echo link_to_item(item_image('square_thumbnail', array('title' => $description))); ?>
         </div>
-    </div><!-- end class="item hentry" -->
+    </div>
     <?php endforeach; ?>
 </div>
 <div class="items" style="padding-left:1em">
