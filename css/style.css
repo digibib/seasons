@@ -11,8 +11,8 @@
 @media screen {
   .picture {
     display: inline-block;
-    width: 220px;
-    height: 220px;
+    width: 215px;
+    height: 215px;
     float:left;
     margin-right: 1em;
     overflow: hidden;
@@ -2260,6 +2260,7 @@
     float: right;
     text-align: center;
   }
+  .items { padding-left: 0.5em; }
   .items .item {
     clear: both;
   }
