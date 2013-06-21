@@ -9,6 +9,20 @@
 /* ---------------------------------------------------------------------*/
 /* Night colors */
 @media screen {
+  .picture {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    float:left;
+    margin-right: 1em;
+    overflow: hidden;
+  }
+  .picture-img img {
+    width: 100%;
+    height: auto;
+  }
+
+
   /* -------------------------------------------------------------------------*/
   /* Layout */
   .container {
