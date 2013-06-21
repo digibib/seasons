@@ -40,6 +40,12 @@
         <div class="element-text"><?php echo metadata('item', 'citation', array('no_escape' => true)); ?></div>
     </div>
 
+    <div id="disclaimer" class="element">
+      <h2>Bruk av bildet</h2>
+      <div class="element-text">Bildet kan ikke brukes i andre sammenhenger uten skriftlig tillatelse fra <?php echo link_to_collection_for_item(); ?>.</div>
+    </div>
+
+
 </aside>
 
 <?php echo foot(); ?>
