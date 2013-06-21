@@ -3,12 +3,13 @@ $pageTitle = __('Search Omeka ') . __('(%s total)', $total_results);
 echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
 $searchRecordTypes = get_search_record_types();
 ?>
-<?php echo search_filters(); ?>
 <?php if ($total_results): ?>
     <div class="items" style="padding-left:1em">
+        <?php $query = (isset($_GET['query']) ? $_GET['query'] : null); ?>
+        <h3>Søk på "<?php echo $query;?>" ga <?php echo $total_results; ?> treff</h3>
         <?php echo pagination_links(); ?>
     </div>
-    
+
 <div class="items">
     <?php foreach (loop('search_texts') as $searchText): ?>
         <?php $record = get_record_by_id($searchText['record_type'], $searchText['record_id']); ?>
