@@ -15,7 +15,9 @@
     height: 215px;
     float:left;
     margin-right: 1em;
+    margin-bottom: 1em;
     overflow: hidden;
+    padding:0 !important;
   }
   .picture-img img {
     width: 100%;

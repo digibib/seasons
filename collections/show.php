@@ -3,6 +3,8 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
 if ($collectionTitle == '') {
     $collectionTitle = __('[Untitled]');
 }
+$coll=get_current_record('Collections',false)->id;
+$total_results=metadata('Collection', 'total_items');
 ?>
 
 <?php echo head(array('title'=> $collectionTitle, 'bodyclass' => 'collections show')); ?>
@@ -11,29 +13,21 @@ if ($collectionTitle == '') {
 
 <div>
    <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'))); ?>
+    <p><?php echo link_to_items_browse('Bla i alle ('.$total_results.') bildene in ' . metadata('Collection',array('Dublin Core','Title')), array('collection' => $coll)); ?></p>
+
 </div>
 
-<div id="collection-items">
-    <h2><?php echo link_to_items_browse(__('Items in the %s Collection', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></h2>
+<div style="padding-left:1em">
+    <h2>Bilder fra samlingen</h2>
     <?php if (metadata('collection', 'total_items') > 0): ?>
         <?php foreach (loop('items') as $item): ?>
         <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
-        <div class="item hentry">
-            <h3><?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?></h3>
+        <div class="picture">
+            <!-- p><strong><?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?></strong></p> -->
 
             <?php if (metadata('item', 'has thumbnail')): ?>
-            <div class="item-img">
+            <div class="picture-img">
                 <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
-            </div>
-            <?php endif; ?>
-
-            <?php if ($text = metadata('item', array('Item Type Metadata', 'Text'), array('snippet'=>250))): ?>
-            <div class="item-description">
-                <p><?php echo $text; ?></p>
-            </div>
-            <?php elseif ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
-            <div class="item-description">
-                <?php echo $description; ?>
             </div>
             <?php endif; ?>
         </div>
