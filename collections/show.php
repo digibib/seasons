@@ -20,18 +20,7 @@ $total_results=metadata('Collection', 'total_items');
 <div style="padding-left:1em">
     <h2>Bilder fra samlingen</h2>
     <?php if (metadata('collection', 'total_items') > 0): ?>
-        <?php foreach (loop('items') as $item): ?>
-        <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
-        <div class="picture">
-            <!-- p><strong><?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?></strong></p> -->
-
-            <?php if (metadata('item', 'has thumbnail')): ?>
-            <div class="picture-img">
-                <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
-            </div>
-            <?php endif; ?>
-        </div>
-        <?php endforeach; ?>
+        <?php echo display_random_items_from_collection($coll, 8); ?>
     <?php else: ?>
         <p><?php echo __("There are currently no items within this collection."); ?></p>
     <?php endif; ?>
