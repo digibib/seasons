@@ -13,7 +13,7 @@ $total_results=metadata('Collection', 'total_items');
 
 <div>
    <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'))); ?>
-    <p><?php echo link_to_items_browse('Bla i alle ('.$total_results.') bildene in ' . metadata('Collection',array('Dublin Core','Title')), array('collection' => $coll)); ?></p>
+    <p><?php echo link_to_items_browse('Bla i alle ('.$total_results.') bildene til ' . metadata('Collection',array('Dublin Core','Title')), array('collection' => $coll)); ?></p>
 
 </div>
 <!-- <div style="padding-left:1em">
