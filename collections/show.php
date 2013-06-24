@@ -16,14 +16,13 @@ $total_results=metadata('Collection', 'total_items');
     <p><?php echo link_to_items_browse('Bla i alle ('.$total_results.') bildene in ' . metadata('Collection',array('Dublin Core','Title')), array('collection' => $coll)); ?></p>
 
 </div>
-<div style="padding-left:1em">
+<!-- <div style="padding-left:1em">
     <form name="search-form" action="/omeka/items/browse" method="get">
         <label><strong>Søk i samlingen: </strong><input type="text" name="search" style="max-width:200px"></label>
         <input type="hidden" name="collection" value="<?php echo $coll;?>">
         <input type="submit" name="submit_search" value="søk">
     </form>
-
-</div>
+</div> -->
 
 <div style="padding-left:1em">
     <h2>Bilder fra samlingen</h2>
