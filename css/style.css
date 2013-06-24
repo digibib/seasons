@@ -11,6 +11,7 @@
 div#fotografi-item-type-metadata-giver { display: none !important;}
 div#fotografi-item-type-metadata-informant { display: none !important;}
 div#fotografi-item-type-metadata-andre-kommentarer { display:none !important;}
+.full { width: 100% !important;}
 @media screen {
   .picture {
     display: inline-block;
