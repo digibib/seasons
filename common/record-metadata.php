@@ -8,9 +8,9 @@
         <h3><?php echo html_escape(__($elementName)); ?></h3>
         <?php if ($elementName == 'Date' & (count($elementInfo['texts']) > 1)):?>
             <div class="element-text">
-                <?php echo search_link($elementInfo['element'][0]->id, $elementInfo['texts'][0]); ?>
+                <?php echo search_link($elementInfo['element']->id, $elementInfo['texts'][0]); ?>
                 -
-                <?php echo search_link($elementInfo['element'][0]->id, end($elementInfo['texts'])); ?>
+                <?php echo search_link($elementInfo['element']->id, end($elementInfo['texts'])); ?>
             </div>
         <?php else: ?>
             <?php foreach ($elementInfo['texts'] as $text): ?>
