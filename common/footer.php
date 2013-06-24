@@ -11,7 +11,7 @@
             <?php endif; ?>
         </div>
 
-        <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
+        <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?> Tilrettelagt og driftet av <a href="http://deichman.no">Deichmanske bibliotek</a></p>
         
     <?php fire_plugin_hook('public_footer'); ?>
     
