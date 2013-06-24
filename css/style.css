@@ -9,6 +9,7 @@
 /* ---------------------------------------------------------------------*/
 /* Night colors */
 div#fotografi-item-type-metadata-giver { display: none !important;}
+div#fotografi-item-type-metadata-informant { display: none !important;}
 @media screen {
   .picture {
     display: inline-block;
