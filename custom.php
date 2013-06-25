@@ -45,7 +45,7 @@ function display_random_items_from_collection($featuredCollection, $nums)
     return $html;
 }
 function search_link($id, $term) {
-    $html = '<a href="/omeka/items/browse?search=&advanced%5B0%5D%5Belement_id%5D=';
+    $html = '<a href="/items/browse?search=&advanced%5B0%5D%5Belement_id%5D=';
     $html .= $id .'&advanced%5B0%5D%5Btype%5D=contains&advanced%5B0%5D%5Bterms%5D=';
     $html .= $term . '&range=&collection=&type=&user=&tags=&public=&featured=&submit_search=Søk">';
     $html .= $term . '</a>';
