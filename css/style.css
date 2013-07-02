@@ -11,7 +11,7 @@
 div#fotografi-item-type-metadata-giver { display: none !important;}
 div#fotografi-item-type-metadata-informant { display: none !important;}
 div#fotografi-item-type-metadata-andre-kommentarer { display:none !important;}
-.full { width: 100% !important;}
+.full { max-width: 100%;}
 @media screen {
   .picture {
     display: inline-block;
@@ -907,13 +907,19 @@ div#fotografi-item-type-metadata-andre-kommentarer { display:none !important;}
   }
   .items.show .item-file {
     text-align: center;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
   }
   .items.show .item-file * {
-    max-width: 100%;
   }
   .items.show .item-file img {
     vertical-align: bottom;
   }
+  .items.show .item-file .download-file {
+    display: table-cell;
+  }
+
   .items.show .download-file {
     display: inline-table;
   }
