@@ -45,6 +45,11 @@
       <div class="element-text">Bildet kan ikke brukes i andre sammenhenger uten skriftlig tillatelse fra <?php echo link_to_collection_for_item(); ?>.</div>
     </div>
 
+    <!-- the edit button for logged in superusers and admins -->
+    <?php if (is_allowed($item, 'edit')){
+    echo __('<div style="background:#000"><a class="edit" href="/admin/items/edit/'.$item->id.'">Rediger denne posten</a></div>');
+    } ?> 
+    <!-- end edit button -->
 
 </aside>
 
