@@ -31,7 +31,7 @@ function display_random_items_from_collection($featuredCollection, $nums)
         $item = find_random_item(array('withImage' => true, 'collection' => $featuredCollection));
         if ($item) {
 
-        if (metadata($item, 'has thumbnail')) {
+        if (metadata($item, 'has thumbnail') && ($item->public)) {
             set_current_record('item', $item);
             $title = metadata('item', array('Dublin Core','Title'));
             $html .= '<div class="picture">' . link_to_item(item_image('square_thumbnail', array('alt' => $title))) .'</div>';
